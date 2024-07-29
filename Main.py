@@ -128,7 +128,7 @@ import os
 import base64
 
 # Read the CSV data
-csv_file_path = 'All Bills.csv'
+csv_file_path = 'assests/All Bills.csv'
 all_bills_df = pd.read_csv(csv_file_path)
 
 # Clean column names by stripping any extra spaces
@@ -149,7 +149,7 @@ def get_base64_image(image_path):
         return base64.b64encode(image_file.read()).decode('utf-8')
 
 # Path to the company logo
-logo_path = 'weboin.png'
+logo_path = 'assests/weboin.png'
 logo_base64 = get_base64_image(logo_path)
 
 def create_invoice_pdf(invoice_data, output_path):
